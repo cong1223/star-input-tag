@@ -13,9 +13,8 @@ created(){   字符串转数组，定义在父组件
             v-for="(tag,index) in dynamicTags"
             :key="index" closable
             :disable-transitions="false"
-            @click="editTag(tag,index)"
-            @close="handleClose(tag)">
-			<span v-if="index!=num">{{tag}}</span>
+            @click="editTag(tag,index)">
+			<span v-if="index!=num"  @close="handleClose(tag)">{{tag}}</span>
 			<input
                 class="custom_input"
                 type="text" v-model="words"
