@@ -21,7 +21,7 @@ created(){   字符串转数组，定义在父组件
                 type="text" v-model="words"
                 v-if="index==num"
                 ref="editInput"
-                @keyup.enter="handleInput(tag,index)"
+                @keyup.enter="$event.target.blur()"
                 @blur="handleInput(tag,index)">
 		</el-tag>
 		<el-input
